@@ -1,6 +1,7 @@
 import { useParams,Link } from "react-router-dom";
 import { getPostByslug }  from "../lib/posts";
-
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm";
 
 export default function Post() {
 
@@ -17,8 +18,11 @@ export default function Post() {
         <main style={{padding:24,maxWidth:800}}>
        <h1>{post.title}</h1>
        <small>{post.date}</small>
-       <article style={{whiteSpace:"pre-wrap"}}>
-        {post.content}
+       <article >
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        {post.content}   
+        </ReactMarkdown>
+
        </article>
         <Link to="/"> - Back To List</Link>
         </main>
