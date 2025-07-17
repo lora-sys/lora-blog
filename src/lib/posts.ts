@@ -34,7 +34,7 @@ export function getPostByslug(slug:string):Post | undefined{
             slug:"hello-vite",
             title:"hello vite",
             date:"2025-7-16",
-            content:"# Hello Vite\n\n This is my **first** post.",
+            content:"# Hello Vite\n\n This is my **first** post 这是一个行内代码示例：`console.log('Hello, world!');`.",
         },
         'second-post':{
             slug:"second-post",
